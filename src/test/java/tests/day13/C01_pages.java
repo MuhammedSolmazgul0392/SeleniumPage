@@ -4,6 +4,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import pages.AmazonPage;
 import utilities.TestBase;
 public class C01_pages extends TestBase {
     // amazon sayfasina gidip
@@ -21,6 +22,13 @@ public class C01_pages extends TestBase {
 
     @Test
     public void testPOM(){
+        driver.get("https://www.amazon.com");
+        AmazonPage amazonPage=new AmazonPage(driver);
+        amazonPage.aramaKutusu.sendKeys("nutella"+Keys.ENTER);
+        System.out.println(amazonPage.sonucYazisiElementi.getText());
+        Assert.assertTrue(amazonPage.sonucYazisiElementi.getText().contains("nutella"));
+
+
 
     }
 }
