@@ -15,11 +15,11 @@ public class C05_NegativeTestConfigReader extends TestBase {
 
         ConcortHotelPage concortHotelPage=new ConcortHotelPage(driver);
         //	login butonuna bas
-        concortHotelPage.ilkLoginLinki.click();
+        concortHotelPage.firstLoginLink.click();
         //	test data username: manager1 ,
-        concortHotelPage.usernameKutusu.sendKeys(ConfigReader.getProperty("CHInvalidUsername"));
+        concortHotelPage.usernameBox.sendKeys(ConfigReader.getProperty("CHInvalidUsername"));
         //	test data password : manager1!
-        concortHotelPage.passwordKutusu.sendKeys(ConfigReader.getProperty("CHInvalidPassword")+ Keys.ENTER);
+        concortHotelPage.passwordBox.sendKeys(ConfigReader.getProperty("CHInvalidPassword")+ Keys.ENTER);
 
         //	Degerleri girildiginde sayfaya girilemedigini test et
 

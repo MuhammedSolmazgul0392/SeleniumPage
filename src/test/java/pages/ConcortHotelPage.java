@@ -15,16 +15,16 @@ public class ConcortHotelPage {
     }
 
     @FindBy(linkText = "Log in")
-    public WebElement ilkLoginLinki;
+    public WebElement firstLoginLink;
 
     @FindBy(id = "UserName")
-    public WebElement usernameKutusu;
+    public WebElement usernameBox;
 
     @FindBy(id = "Password")
-    public WebElement passwordKutusu;
+    public WebElement passwordBox;
 
     @FindBy(id = "btnSubmit")
-    public WebElement loginButonu;
+    public WebElement loginButton;
 
     @FindBy(xpath = "//span[text()='ListOfUsers']")
     public WebElement basariliGirisYaziElementi;

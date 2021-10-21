@@ -12,15 +12,17 @@ public class C04_AmazonConfigReader extends TestBase {
     @Test
     public void test(){
         // amazon sayfasina gidip
-        driver.get(ConfigReader.getProperty("amazonUrl"));
+      driver.get(ConfigReader.getProperty("amazonUrl"));
 
-        AmazonPage amazonPage=new AmazonPage(driver);
+       AmazonPage amazonPage=new AmazonPage(driver);
 
         // nutella icin arama yapin
-        amazonPage.searchBox.sendKeys(ConfigReader.getProperty("amazonArananKelime")+ Keys.ENTER);
+        amazonPage.searchBox.sendKeys(ConfigReader.getProperty("amazonArananKelime"+Keys.ENTER));
         // sonuc sayisini yazdirin ve sonuc yazisinin nutella icerdigini test edin
         System.out.println(amazonPage.sonucYazisiElementi.getText());
 
-        Assert.assertTrue(amazonPage.sonucYazisiElementi.getText().contains(ConfigReader.getProperty("amazonArananKelime")));
+        Assert.
+                assertTrue(amazonPage.sonucYazisiElementi.getText().
+                        contains(ConfigReader.getProperty("amazonArananKelime")));
     }
 }
