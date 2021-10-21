@@ -27,7 +27,7 @@ public class C01_pages extends TestBase {
         amazonPage.searchBox.sendKeys("nutella"+Keys.ENTER);
         System.out.println(amazonPage.sonucYazisiElementi.getText());
         Assert.assertTrue(amazonPage.sonucYazisiElementi.getText().contains("nutella"));
-
+//gizzz
 
 
     }
