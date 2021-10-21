@@ -17,7 +17,7 @@ public class C04_AmazonConfigReader extends TestBase {
         AmazonPage amazonPage=new AmazonPage(driver);
 
         // nutella icin arama yapin
-        amazonPage.aramaKutusu.sendKeys(ConfigReader.getProperty("amazonArananKelime")+ Keys.ENTER);
+        amazonPage.searchBox.sendKeys(ConfigReader.getProperty("amazonArananKelime")+ Keys.ENTER);
         // sonuc sayisini yazdirin ve sonuc yazisinin nutella icerdigini test edin
         System.out.println(amazonPage.sonucYazisiElementi.getText());
 

@@ -24,7 +24,7 @@ public class C01_pages extends TestBase {
     public void testPOM(){
         driver.get("https://www.amazon.com");
         AmazonPage amazonPage=new AmazonPage(driver);
-        amazonPage.aramaKutusu.sendKeys("nutella"+Keys.ENTER);
+        amazonPage.searchBox.sendKeys("nutella"+Keys.ENTER);
         System.out.println(amazonPage.sonucYazisiElementi.getText());
         Assert.assertTrue(amazonPage.sonucYazisiElementi.getText().contains("nutella"));
 

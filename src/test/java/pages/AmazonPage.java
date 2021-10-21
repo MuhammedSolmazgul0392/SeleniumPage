@@ -21,7 +21,7 @@ public class AmazonPage {
 
     //WebElement aramaKutusu= driver.findElement(By.id("twotabsearchtextbox"));
     @FindBy(id="twotabsearchtextbox")
-    public WebElement aramaKutusu;
+    public WebElement searchBox;
 
     @FindBy(xpath = "//div[@class='a-section a-spacing-small a-spacing-top-small']")
     public WebElement sonucYazisiElementi;
@@ -30,6 +30,6 @@ public class AmazonPage {
     public WebElement dropdownMenu;
 
     @FindBy(xpath = "//span[@class='a-size-medium a-color-base a-text-normal']")
-    public WebElement ilkUrunIsim;
+    public WebElement firstproductname;
 
 }
